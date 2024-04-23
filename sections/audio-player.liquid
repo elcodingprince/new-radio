@@ -1,0 +1,38 @@
+{% schema %}
+{
+  "name": "Product Audio",
+  "settings": [
+    {
+      "type": "text",
+      "id": "audio_url",
+      "label": "Audio File URL",
+      "default": "http://example.com/your-audio-file.mp3"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Audio",
+      "category": "Product"
+    }
+  ]
+}
+{% endschema %}
+
+{% if product.tags contains 'audio' %}
+  <div class="product-audio-player">
+    <audio controls>
+      <source src="{{ section.settings.audio_url }}" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+{% endif %}
+
+{% stylesheet %}
+.product-audio-player {
+  margin: 20px 0;
+}
+{% endstylesheet %}
+
+{% javascript %}
+// Custom JavaScript can go here if needed
+{% endjavascript %}
