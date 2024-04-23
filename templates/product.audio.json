@@ -4,7 +4,6 @@
     "main":{
         "type":"audio-player"
         }
-        
     },
     "order": ["main"]
 }

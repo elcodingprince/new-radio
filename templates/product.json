@@ -20,6 +20,9 @@
             "text_style": "subtitle"
           }
         },
+        "audio_player": {
+            "type": "audio-player"
+        },
         "price": {
           "type": "price"
         },
