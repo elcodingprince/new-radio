@@ -13,9 +13,6 @@
         "title": {
           "type": "title"
         },
-          "audio_player": {
-              "type": "audio-player"
-          },
         "caption": {
           "type": "text",
           "settings": {
@@ -91,7 +88,6 @@
       "block_order": [
         "vendor",
         "title",
-        "audio-player",
         "caption",
         "price",
         "variant_picker",
