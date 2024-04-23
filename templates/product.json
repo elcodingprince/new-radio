@@ -125,6 +125,12 @@
         "padding_bottom": 12
       }
     },
+    "audio_player_KAiN3r": {
+      "type": "audio_player",
+      "settings": {
+        "src_product_audio": "beat-one-1"
+      }
+    },
     "image-with-text": {
       "type": "image-with-text",
       "blocks": {
@@ -222,19 +228,13 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
-    },
-    "audio_player_KAiN3r": {
-      "type": "audio_player",
-      "settings": {
-        "src_product_audio": "beat-one-1"
-      }
     }
   },
   "order": [
     "main",
+    "audio_player_KAiN3r",
     "image-with-text",
     "multicolumn",
-    "related-products",
-    "audio_player_KAiN3r"
+    "related-products"
   ]
 }
