@@ -43,20 +43,10 @@
         "padding_top": 20,
         "padding_bottom": 20
       }
-    },
-    "audio_player_jkR94G": {
-      "type": "audio_player",
-      "custom_css": [
-
-      ],
-      "settings": {
-        "src_product_audio": "beat-one"
-      }
     }
   },
   "order": [
     "announcement-bar",
-    "header",
-    "audio_player_jkR94G"
+    "header"
   ]
 }
