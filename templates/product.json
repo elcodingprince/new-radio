@@ -20,9 +20,6 @@
             "text_style": "subtitle"
           }
         },
-        "audio-player": {
-            "type": "audio-player"
-        },
         "price": {
           "type": "price"
         },
@@ -93,7 +90,6 @@
         "title",
         "caption",
         "price",
-        "audio-player",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
