@@ -1,14 +1,7 @@
 {% schema %}
 {
   "name": "Audio Player",
-  "settings": [
-    {
-      "type": "text",
-      "id": "audio_url",
-      "label": "Audio File URL",
-      "default": "http://example.com/your-audio-file.mp3"
-    }
-  ],
+  "settings": [],
   "presets": [
     {
       "name": "Audio Player",
@@ -21,7 +14,7 @@
 {% if product.tags contains 'audio' %}
   <div class="product-audio-player">
     <audio controls>
-      <source src="{{ section.settings.audio_url }}" type="audio/mpeg">
+      <source src="{{ card_product.metafields.product.audio.value.url }}" type="audio/mpeg">
       Your browser does not support the audio element.
     </audio>
   </div>
@@ -32,7 +25,3 @@
   margin: 20px 0;
 }
 {% endstylesheet %}
-
-{% javascript %}
-// Custom JavaScript can go here if needed
-{% endjavascript %}
