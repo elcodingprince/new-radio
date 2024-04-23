@@ -13,6 +13,9 @@
         "title": {
           "type": "title"
         },
+          "audio_player": {
+              "type": "audio-player"
+          },
         "caption": {
           "type": "text",
           "settings": {
