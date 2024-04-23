@@ -91,6 +91,7 @@
       "block_order": [
         "vendor",
         "title",
+        "audio-player",
         "caption",
         "price",
         "variant_picker",
