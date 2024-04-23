@@ -44,8 +44,11 @@
         "padding_bottom": 20
       }
     },
-    "audio_player_HxCHCA": {
-      "type": "audio-player",
+    "audio_player_jkR94G": {
+      "type": "audio_player",
+      "custom_css": [
+
+      ],
       "settings": {
         "audio_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0872\/4512\/7978\/files\/KAROL_G_-_Amargura_Visualizer.mp3?v=1713562327"
       }
@@ -54,6 +57,6 @@
   "order": [
     "announcement-bar",
     "header",
-    "audio_player_HxCHCA"
+    "audio_player_jkR94G"
   ]
 }
