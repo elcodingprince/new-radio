@@ -128,7 +128,7 @@
     "audio_player_KAiN3r": {
       "type": "audio_player",
       "settings": {
-        "src_product_audio": "beat-one-1"
+        "src_product_audio": "{{ product }}"
       }
     },
     "image-with-text": {
