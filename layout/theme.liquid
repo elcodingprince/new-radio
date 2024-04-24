@@ -126,7 +126,6 @@
         --product-card-text-alignment: {{ settings.card_text_alignment }};
         --product-card-border-width: {{ settings.card_border_thickness | divided_by: 10.0 }}rem;
         --product-card-border-opacity: {{ settings.card_border_opacity | divided_by: 100.0 }};
-        --product-card-shadow-opacity: {{ settings.card_shadow_opacity | divided_by: 100.0 }};
         --product-card-shadow-visible: {% if settings.card_shadow_opacity > 0 %}1{% else %}0{% endif %};
         --product-card-shadow-horizontal-offset: {{ settings.card_shadow_horizontal_offset | divided_by: 10.0 }}rem;
         --product-card-shadow-vertical-offset: {{ settings.card_shadow_vertical_offset | divided_by: 10.0 }}rem;
@@ -150,6 +149,7 @@
         --blog-card-border-opacity: {{ settings.blog_card_border_opacity | divided_by: 100.0 }};
         --blog-card-shadow-opacity: {{ settings.blog_card_shadow_opacity | divided_by: 100.0 }};
         --blog-card-shadow-visible: {% if settings.blog_card_shadow_opacity > 0 %}1{% else %}0{% endif %};
+        --product-card-shadow-opacity: {{ settings.card_shadow_opacity | divided_by: 100.0 }};
         --blog-card-shadow-horizontal-offset: {{ settings.blog_card_shadow_horizontal_offset | divided_by: 10.0 }}rem;
         --blog-card-shadow-vertical-offset: {{ settings.blog_card_shadow_vertical_offset | divided_by: 10.0 }}rem;
         --blog-card-shadow-blur-radius: {{ settings.blog_card_shadow_blur | divided_by: 10.0 }}rem;
@@ -356,4 +356,5 @@
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
   </body>
+    {% sections 'omni-player' %}
 </html>
