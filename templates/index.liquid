@@ -4,6 +4,6 @@
     <div>
         <img src="{{ product.featured_image | img_url: '200x200' }}" alt="{{ product.title | escape }}">
         <h3>{{ product.title | link_to: product.url }}</h3>
-        <p>{{ product.price }}</p>
+        <p>{{ product.price | money }}</p>
     </div> 
 {% endfor %} 
