@@ -2,10 +2,10 @@
 {
   "name": "Audio Player",
   "settings": [
-        {
+    {
       "type": "product",
-      "id": "src_product_audio",
-      "label": "Product"
+      "id": "selected_product",
+      "label": "Select Product"
     }
   ],
   "presets": [
@@ -17,41 +17,12 @@
 }
 {% endschema %}
 
-{% if product.metafields.custom.audio %}
+{% if section.settings.selected_product and section.settings.selected_product.metafields.custom.audio %}
   <div class="custom-audio-player">
-    <button class="playPauseButton" data-player-id="audioPlayer_{{ product.id }}">
+    <button class="playPauseButton" 
+            data-product-id="{{ section.settings.selected_product.id }}" 
+            data-audio-url="{{ section.settings.selected_product.metafields.custom.audio.value.url }}">
       <i class="fa-solid fa-play"></i>
     </button>
   </div>
 {% endif %}
-
-{% javascript %}
-document.addEventListener("DOMContentLoaded", function() {
-  var playPauseButtons = document.querySelectorAll('.playPauseButton');
-
-  playPauseButtons.forEach(function(button) {
-    var audioPlayerId = button.getAttribute('data-player-id');
-    var audioPlayer = document.getElementById(audioPlayerId);
-
-    button.addEventListener('click', function() {
-      if (audioPlayer.paused) {
-        audioPlayer.play();
-        button.innerHTML = '<i class="fa-solid fa-pause"></i>'; // Change icon to pause
-      } else {
-        audioPlayer.pause();
-        button.innerHTML = '<i class="fa-solid fa-play"></i>'; // Change icon to play
-      }
-    });
-
-    // Update button icon when audio playback state changes
-    audioPlayer.addEventListener('play', function() {
-      button.innerHTML = '<i class="fas fa-pause"></i>'; // Change icon to pause when audio starts playing
-    });
-
-    audioPlayer.addEventListener('pause', function() {
-      button.innerHTML = '<i class="fas fa-play"></i>'; // Change icon to play when audio is paused
-    });
-  });
-});
-
-{% endjavascript %}
