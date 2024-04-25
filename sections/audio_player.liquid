@@ -19,6 +19,10 @@
 
 {% if section.settings.selected_product and section.settings.selected_product.metafields.custom.audio %}
   <div class="custom-audio-player">
+    <audio id="audioPlayer" controls>
+      <source src="{{ section.settings.selected_product.metafields.custom.audio.value.url }}" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
     <button class="playPauseButton" 
             data-product-id="{{ section.settings.selected_product.id }}" 
             data-audio-url="{{ section.settings.selected_product.metafields.custom.audio.value.url }}">
