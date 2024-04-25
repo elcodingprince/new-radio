@@ -14,7 +14,7 @@ function playAudio(audioUrl) {
 }
 
 // Example usage: Assuming you have play buttons with class "play-button" associated with each audio file
-var playButtons = document.querySelectorAll('.play-button');
+var playButtons = document.querySelectorAll('.playPauseButton');
 playButtons.forEach(function(button) {
   button.addEventListener('click', function() {
     var audioUrl = this.dataset.audioUrl;
