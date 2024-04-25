@@ -1,5 +1,5 @@
 <div class="omni-audio-player">
-  <audio id="omniAudioPlayer" controls>
+  <audio id="omniAudioPlayer" controls loop sticky>
     Your browser does not support the audio element.
   </audio>
 </div>
@@ -33,8 +33,9 @@ playButtons.forEach(function(button) {
 
 {% style %}
 .omni-audio-player {
-  position: sticky;
-  top: 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
   width: 100%;
   z-index: 999; 
 }
