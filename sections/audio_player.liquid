@@ -19,11 +19,9 @@
 
 {% if product.metafields.custom.audio %}
   <div class="custom-audio-player">
-    <audio id="audioPlayer" controls>
-      <source src="{{ product.metafields.custom.audio.value.url }}" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio>
-    <button id="playPauseButton" class="play">Play</button>
+    <button class="playPauseButton" data-player-id="audioPlayer_{{ product.id }}">
+      <i class="fa-solid fa-play"></i>
+    </button>
   </div>
 {% endif %}
 
