@@ -39,12 +39,12 @@ document.addEventListener('DOMContentLoaded', function() {
   playPauseButton.addEventListener('click', function() {
     if (audioPlayer.paused) {
       audioPlayer.play();
-      playPauseButton.querySelector('i').classList.remove('fa-play');
-      playPauseButton.querySelector('i').classList.add('fa-pause');
+      playPauseButton.querySelector('i').classList.remove('fa-solid fa-play');
+      playPauseButton.querySelector('i').classList.add('fa-solid fa-pause');
     } else {
       audioPlayer.pause();
-      playPauseButton.querySelector('i').classList.remove('fa-pause');
-      playPauseButton.querySelector('i').classList.add('fa-play');
+      playPauseButton.querySelector('i').classList.remove('fa-solid fa-pause');
+      playPauseButton.querySelector('i').classList.add('fa-solid fa-play');
     }
   });
 });
