@@ -27,17 +27,31 @@
 
 {% javascript %}
 document.addEventListener("DOMContentLoaded", function() {
-  var audioPlayer = document.getElementById('audioPlayer');
-  var playPauseButton = document.getElementById('playPauseButton');
+  var playPauseButtons = document.querySelectorAll('.playPauseButton');
 
-  playPauseButton.addEventListener('click', function() {
-    if (audioPlayer.paused) {
-      audioPlayer.play();
-      playPauseButton.textContent = 'Pause';
-    } else {
-      audioPlayer.pause();
-      playPauseButton.textContent = 'Play';
-    }
+  playPauseButtons.forEach(function(button) {
+    var audioPlayerId = button.getAttribute('data-player-id');
+    var audioPlayer = document.getElementById(audioPlayerId);
+
+    button.addEventListener('click', function() {
+      if (audioPlayer.paused) {
+        audioPlayer.play();
+        button.innerHTML = '<i class="fas fa-pause"></i>'; // Change icon to pause
+      } else {
+        audioPlayer.pause();
+        button.innerHTML = '<i class="fas fa-play"></i>'; // Change icon to play
+      }
+    });
+
+    // Update button icon when audio playback state changes
+    audioPlayer.addEventListener('play', function() {
+      button.innerHTML = '<i class="fas fa-pause"></i>'; // Change icon to pause when audio starts playing
+    });
+
+    audioPlayer.addEventListener('pause', function() {
+      button.innerHTML = '<i class="fas fa-play"></i>'; // Change icon to play when audio is paused
+    });
   });
 });
+
 {% endjavascript %}
