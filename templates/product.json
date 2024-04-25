@@ -128,7 +128,7 @@
     "audio_player_KAiN3r": {
       "type": "audio_player",
       "settings": {
-        "src_product_audio": "{{ product }}"
+        "selected_product": "{{ product }}"
       }
     },
     "image-with-text": {
