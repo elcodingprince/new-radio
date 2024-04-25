@@ -32,22 +32,25 @@
 {% endif %}
 
 {% javascript %}
+{% javascript %}
 document.addEventListener('DOMContentLoaded', function() {
   var audioPlayer = document.getElementById('audioPlayer');
-  var playPauseButton = document.querySelector('.playPauseButton');
+  var playPauseButton = document.querySelector('.playPauseButton i');
 
   playPauseButton.addEventListener('click', function() {
     if (audioPlayer.paused) {
       audioPlayer.play();
-      playPauseButton.querySelector('i').classList.remove('fa-solid fa-play');
-      playPauseButton.querySelector('i').classList.add('fa-solid fa-pause');
+      playPauseButton.classList.remove('fa-sole fa-play');
+      playPauseButton.classList.add('fa-solid fa-pause');
     } else {
       audioPlayer.pause();
-      playPauseButton.querySelector('i').classList.remove('fa-solid fa-pause');
-      playPauseButton.querySelector('i').classList.add('fa-solid fa-play');
+      playPauseButton.classList.remove('fa-solid fa-pause');
+      playPauseButton.classList.add('fa-solid fa-play');
     }
   });
 });
+{% endjavascript %}
+
 {% endjavascript %}
 
 {% style %}
