@@ -8,26 +8,6 @@
   </div>
 </div>
 
-{% javascript %}
-document.addEventListener('DOMContentLoaded', function() {
-  var audioPlayer = document.getElementById('omniAudioPlayer');
-  var playPauseButton = document.getElementById('playPauseButton');
-
-  playPauseButton.addEventListener('click', function() {
-    if (audioPlayer.paused) {
-      audioPlayer.play();
-      playPauseButton.classList.add('playing');
-      playPauseButton.classList.remove('paused');
-    } else {
-      audioPlayer.pause();
-      playPauseButton.classList.add('paused');
-      playPauseButton.classList.remove('playing');
-    }
-  });
-});
-
-{% endjavascript %}
-
 
 {% schema %}
     {

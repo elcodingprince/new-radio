@@ -30,3 +30,22 @@
     </button>
   </div>
 {% endif %}
+
+{% javascript %}
+document.addEventListener('DOMContentLoaded', function() {
+  var audioPlayer = document.getElementById('audioPlayer');
+  var playPauseButton = document.querySelector('.playPauseButton');
+
+  playPauseButton.addEventListener('click', function() {
+    if (audioPlayer.paused) {
+      audioPlayer.play();
+      playPauseButton.querySelector('i').classList.remove('fa-play');
+      playPauseButton.querySelector('i').classList.add('fa-pause');
+    } else {
+      audioPlayer.pause();
+      playPauseButton.querySelector('i').classList.remove('fa-pause');
+      playPauseButton.querySelector('i').classList.add('fa-play');
+    }
+  });
+});
+{% endjavascript %}
