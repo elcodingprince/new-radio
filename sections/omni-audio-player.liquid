@@ -1,12 +1,12 @@
 <div class="omni-audio-player">
-  <audio id="stickyAudioPlayer" controls>
+  <audio id="omniAudioPlayer" controls>
     Your browser does not support the audio element.
   </audio>
 </div>
 
 {% javascript %}
 // JavaScript to handle audio playback
-var stickyAudioPlayer = document.getElementById('stickyAudioPlayer');
+var stickyAudioPlayer = document.getElementById('omniAudioPlayer');
 
 function playAudio(audioUrl) {
   stickyAudioPlayer.src = audioUrl;
