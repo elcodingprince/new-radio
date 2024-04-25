@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
   playPauseButton.addEventListener('click', function() {
     if (audioPlayer.paused) {
       audioPlayer.play();
-      playPauseButton.classList.remove('fa-sole fa-play');
+      playPauseButton.classList.remove('fa-solid fa-play');
       playPauseButton.classList.add('fa-solid fa-pause');
     } else {
       audioPlayer.pause();
@@ -49,6 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
+
 {% endjavascript %}
 
 {% endjavascript %}
