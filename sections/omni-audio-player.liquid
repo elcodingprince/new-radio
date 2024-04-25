@@ -1,26 +1,31 @@
 <div class="omni-audio-player">
-  <audio id="omniAudioPlayer" controls loop sticky>
+  <audio id="omniAudioPlayer"loop>
     Your browser does not support the audio element.
   </audio>
+  <div id="play-pause-button" class="play-button">
+    <i class="fa-solid fa-play"></i>
+    <i class="fa-solid fa-pause"></i>
+  </div>
 </div>
 
 {% javascript %}
-// JavaScript to handle audio playback
-var stickyAudioPlayer = document.getElementById('omniAudioPlayer');
+document.addEventListener('DOMContentLoaded', function() {
+  var audioPlayer = document.getElementById('omniAudioPlayer');
+  var playPauseButton = document.getElementById('playPauseButton');
 
-function playAudio(audioUrl) {
-  stickyAudioPlayer.src = audioUrl;
-  stickyAudioPlayer.play();
-}
-
-// Example usage: Assuming you have play buttons with class "play-button" associated with each audio file
-var playButtons = document.querySelectorAll('.playPauseButton');
-playButtons.forEach(function(button) {
-  button.addEventListener('click', function() {
-    var audioUrl = this.dataset.audioUrl;
-    playAudio(audioUrl);
+  playPauseButton.addEventListener('click', function() {
+    if (audioPlayer.paused) {
+      audioPlayer.play();
+      playPauseButton.classList.add('playing');
+      playPauseButton.classList.remove('paused');
+    } else {
+      audioPlayer.pause();
+      playPauseButton.classList.add('paused');
+      playPauseButton.classList.remove('playing');
+    }
   });
 });
+
 {% endjavascript %}
 
 
@@ -34,7 +39,24 @@ playButtons.forEach(function(button) {
 {% style %}
 .omni-audio-player {
   position: fixed; 
-    bottom: 0; 
-    width: 100%; }
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    text-align: center;
 }
+
+#play-pause-button {
+  cursor: pointer;
+}
+
+#play-pause-button i {
+  display: none;
+}
+
+#play-pause-button.playing i.fa-pause,
+#play-pause-button.paused i.fa-play {
+  display: inline-block;
+}
+
 {% endstyle %}
