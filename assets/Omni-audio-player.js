@@ -8,7 +8,6 @@ const playerProgress = document.getElementById('player-progress');
 const prevBtn = document.getElementById('prev');
 const nextBtn = document.getElementById('next');
 const playBtn = document.getElementById('play');
-const background = document.getElementById('bg-img');
 
 function loadMusic(song) {
   music.src = song.path;
