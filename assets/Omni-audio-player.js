@@ -1,6 +1,5 @@
 const image = document.getElementById('cover');
-const title = document.getElementById('music-title');
-const artist = document.getElementById('music-artist');
+const title = document.getElementById('product title');
 const currentTimeEl = document.getElementById('current-time');
 const durationEl = document.getElementById('duration');
 const progress = document.getElementById('progress');
