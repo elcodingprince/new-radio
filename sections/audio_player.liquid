@@ -20,7 +20,7 @@
 {% if section.settings.selected_product and section.settings.selected_product.metafields.custom.audio %}
 <div class="play-button">
     <audio id="audioPlayer" controls style="display: none;"></audio> <!-- Moved the audio element outside the button -->
-    <button class="playPauseButton" id="play" <!-- Added the id to the button --> 
+    <button class="playPauseButton" id="play"> 
             data-product-id="{{ section.settings.selected_product.id }}" 
             data-audio-url="{{ section.settings.selected_product.metafields.custom.audio.value.url }}">
         <i class="fa-solid fa-play"></i>
