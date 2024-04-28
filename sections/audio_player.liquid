@@ -1,6 +1,6 @@
 {% schema %}
 {
-  "name": "Audio Player",
+  "name": "Pay button",
   "settings": [
     {
       "type": "product",
@@ -10,7 +10,7 @@
   ],
   "presets": [
     {
-      "name": "Audio Player",
+      "name": "Play button",
       "category": "Product"
     }
   ]
@@ -18,11 +18,8 @@
 {% endschema %}
 
 {% if section.settings.selected_product and section.settings.selected_product.metafields.custom.audio %}
-  <div class="custom-audio-player">
+  <div class="play-button">
     <audio id="audioPlayer" controls>
-      <source src="{{ section.settings.selected_product.metafields.custom.audio.value.url }}" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio>
     <button class="playPauseButton" 
             data-product-id="{{ section.settings.selected_product.id }}" 
             data-audio-url="{{ section.settings.selected_product.metafields.custom.audio.value.url }}">
@@ -32,21 +29,18 @@
 {% endif %}
 
 {% javascript %}
-{% javascript %}
-document.addEventListener('DOMContentLoaded', function() {
-  var audioPlayer = document.getElementById('audioPlayer');
-  var playPauseButton = document.querySelector('.playPauseButton i');
-
-  playPauseButton.addEventListener('click', function() {
-    if (audioPlayer.paused) {
-      audioPlayer.play();
-      playPauseButton.classList.remove('fa-solid fa-play');
-      playPauseButton.classList.add('fa-solid fa-pause');
-    } else {
-      audioPlayer.pause();
-      playPauseButton.classList.remove('fa-solid fa-pause');
-      playPauseButton.classList.add('fa-solid fa-play');
-    }
+// Add an event listener to all play buttons on products
+document.querySelectorAll('.play-button').forEach(button => {
+  button.addEventListener('click', function() {
+    // Extract the audio URL from the data-audio attribute
+    const audioUrl = this.getAttribute('data-audio');
+    // Load the audio into the sticky audio player
+    loadMusic({
+      path: audioUrl,
+      displayName: 'Custom Title', // You can set this dynamically if needed
+      cover: 'Custom Cover URL',   // You can set this dynamically if needed
+      artist: 'Custom Artist'      // You can set this dynamically if needed
+    });
   });
 });
 

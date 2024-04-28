@@ -18,7 +18,7 @@ const songs = [
     path: "{{ product.metafields.custom.audio | escape }}", // Fetch audio URL from custom product metafield
     displayName: "{{ product.title }}", // Fetch product title dynamically
     cover: "{{ product.featured_image.src | img_url: 'medium' }}", // Fetch product featured image dynamically
-    artist: 'Drake', // Static or dynamically fetched artist name
+    artist:  // Static or dynamically fetched artist name
   },
 ];
 
