@@ -19,7 +19,7 @@
 
 {% if section.settings.selected_product and section.settings.selected_product.metafields.custom.audio %}
   <div class="play-button">
-    <audio id="audioPlayer" controls>
+    <audio id="audioPlayer" controls style="display: none;">
     <button class="playPauseButton" 
             data-product-id="{{ section.settings.selected_product.id }}" 
             data-audio-url="{{ section.settings.selected_product.metafields.custom.audio.value.url }}">
