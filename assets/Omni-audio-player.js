@@ -1,5 +1,5 @@
 const image = document.getElementById('cover');
-const title = document.getElementById('product title');
+const title = document.getElementById('product-title');
 const currentTimeEl = document.getElementById('current-time');
 const durationEl = document.getElementById('duration');
 const progress = document.getElementById('progress');
