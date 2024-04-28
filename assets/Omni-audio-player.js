@@ -10,6 +10,14 @@ const nextBtn = document.getElementById('next');
 const playBtn = document.getElementById('play');
 const background = document.getElementById('bg-img');
 
+function loadMusic(song) {
+  music.src = song.path;
+  title.textContent = song.displayName;
+  artist.textContent = song.artist;
+  image.src = song.cover;
+  background.src = song.cover;
+}
+
 const music = new Audio();
 
 // add songs here 
@@ -51,13 +59,7 @@ function pauseMusic() {
   music.pause();
 }
 
-function loadMusic(song) {
-  music.src = song.path;
-  title.textContent = song.displayName;
-  artist.textContent = song.artist;
-  image.src = song.cover;
-  background.src = song.cover;
-}
+
 
 function changeMusic(direction) {
   musicIndex = (musicIndex + direction + songs.length) % songs.length;
