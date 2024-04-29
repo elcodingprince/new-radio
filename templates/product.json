@@ -127,6 +127,7 @@
     },
     "audio_player_KAiN3r": {
       "type": "audio_player",
+      "disabled": true,
       "settings": {
         "selected_product": "{{ product }}"
       }
