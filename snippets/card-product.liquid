@@ -102,6 +102,14 @@
                   height="{{ card_product.media[1].height }}"
                 >
               {%- endif -%}
+
+              {%- if card_product.metafields.custom.audio -%}
+                <div class="play-button-overlay">
+                  <button class="play-button" data-audio="{{ card_product.metafields.custom.audio }}">
+                    <i class="fa-solid fa-play"></i>
+                  </button>
+                </div>
+              {%- endif -%}
             </div>
           </div>
         {%- endif -%}
