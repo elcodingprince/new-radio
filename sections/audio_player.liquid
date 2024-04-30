@@ -19,7 +19,7 @@
 
 {% if section.settings.selected_product and section.settings.selected_product.metafields.custom.audio %}
 <audio id="audioPlayer" controls>
-    <source src="{{ section.settings.selected_product.metafields.custom.audio }}" type="audio/mpeg">
+    <source src="{{ section.settings.selected_product.metafields.custom.audio.url }}" type="audio/mpeg">
     Your browser does not support the audio element.
 </audio>
 {% endif %}
