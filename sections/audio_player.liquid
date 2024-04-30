@@ -17,15 +17,17 @@
 }
 {% endschema %}
 
- % if product.tags contains 'audio' %}
-  <div class="product-audio-player">	  <div class="custom-audio-player">
-    <audio controls>	  <audio id="audioPlayer" controls>
-      <source src="{{ product.metafields.product.audio.value.url }}" type="audio/mpeg">	    <source src="{{ card_product.metafields.product.audio.value.url }}" type="audio/mpeg">
-      Your browser does not support the audio element.	    Your browser does not support the audio element.
-    </audio>	  </audio>
-  </div>	  <button id="playPauseButton" class="play">Play</button>
-</div>
-{% endif %}	{% endif %}
+{% if product.tags contains 'audio' %}
+    <div class= "hiddenAudioPlayer">
+     <audio id="audioPlayer" contains>
+      <sourceC type="audio/mpeg">
+      Your browswer does not support this audio element.
+
+    </audio>
+
+
+
+
 
 
 {% javascript %}
