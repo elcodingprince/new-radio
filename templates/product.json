@@ -53,6 +53,7 @@
         },
         "collapsible-row-0": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "heading": "Materials",
             "icon": "leather",
@@ -62,6 +63,7 @@
         },
         "collapsible-row-1": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "heading": "Shipping & Returns",
             "icon": "truck",
@@ -71,6 +73,7 @@
         },
         "collapsible-row-2": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "heading": "Dimensions",
             "icon": "ruler",
@@ -80,17 +83,12 @@
         },
         "collapsible-row-3": {
           "type": "collapsible_tab",
+          "disabled": true,
           "settings": {
             "heading": "Care Instructions",
             "icon": "heart",
             "content": "",
             "page": ""
-          }
-        },
-        "share": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share"
           }
         }
       },
@@ -106,8 +104,7 @@
         "collapsible-row-0",
         "collapsible-row-1",
         "collapsible-row-2",
-        "collapsible-row-3",
-        "share"
+        "collapsible-row-3"
       ],
       "settings": {
         "enable_sticky_info": true,
@@ -123,6 +120,12 @@
         "enable_video_looping": false,
         "padding_top": 16,
         "padding_bottom": 12
+      }
+    },
+    "audio_player_rCL47j": {
+      "type": "audio_player",
+      "settings": {
+        "selected_product": "{{ product }}"
       }
     },
     "image-with-text": {
@@ -226,6 +229,7 @@
   },
   "order": [
     "main",
+    "audio_player_rCL47j",
     "image-with-text",
     "multicolumn",
     "related-products"
