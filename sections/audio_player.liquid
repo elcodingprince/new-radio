@@ -36,15 +36,15 @@
 {% javascript %}
 
      // Get reference to the audio player
-     var audioPlayer = document.getElementById('audioPlayer');
+     var audioPlayer = document.getElementById('productAudioPlayer');
 
      // Add click event listener to the play button
      document.getElementById('productPlayBtn').addEventListener('click', function() {
        // Check if audio is paused, then play or pause accordingly
-       if (audioPlayer.paused) {
-         audioPlayer.play();
+       if (productAudioPlayer.paused) {
+         productAudioPlayer.play();
        } else {
-         audioPlayer.pause();
+         productAudioPlayer.pause();
        }
      });
 {% endjavascript %}
