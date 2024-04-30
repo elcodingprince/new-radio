@@ -24,10 +24,14 @@
     </button>
 </div>
 <audio id="audioPlayer" controls>
-    <source src= "{{ product.metafields.custom.audio.url }}" type="audio/mpeg">
+    {% for product in section.settings.selected_product %}
+        {% if product.metafields.custom.audio %}
+            <source src="{{ product.metafields.custom.audio }}" type="audio/mpeg">
+        {% endif %}
+    {% endfor %}
     Your browser does not support the audio element.
 </audio>
-<script src="Omni-audio-player.j" defer></script>
+<script src="Omni-audio-player.js" defer></script>
 {% endif %}
 
 
