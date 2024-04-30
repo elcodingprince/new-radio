@@ -22,11 +22,11 @@
     <button class="playPauseButton" id="productPlayBtn"> 
         <i class="fa-solid fa-play"></i>
     </button>
-    <audio id="audioPlayer" controls style="display: none;">
-        <source src="{{ product.metafields.custom.audio.value }}" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
 </div>
+<audio id="audioPlayer" controls>
+    <source src="{{ product.metafields.custom.audio.value }}" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
 <script src="Omni-audio-player.j" defer></script>
 {% endif %}
 
