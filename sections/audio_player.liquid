@@ -20,7 +20,7 @@
  {% if product.tags contains 'audio' %}
    <div class="product-audio-player">
      <audio controls>
-       <source src={{ section.settings.product.metafields.product.audio.value.url }} type="audio/mpeg">
+       <source src="{{ section.settings.product.metafields.product.audio.value.url }}" type="audio/mpeg">
        Your browser does not support the audio element.
      </audio>
    </div>
