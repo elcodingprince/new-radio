@@ -30,21 +30,19 @@
    <i class="fa-solid fa-play"></i>
    </div>
 
-
 {% endif %}
 
 {% javascript %}
-
      // Get reference to the audio player
      var audioPlayer = document.getElementById('productAudioPlayer');
 
      // Add click event listener to the play button
      document.getElementById('productPlayBtn').addEventListener('click', function() {
        // Check if audio is paused, then play or pause accordingly
-       if (productAudioPlayer.paused) {
-         productAudioPlayer.play();
+       if (audioPlayer.paused) {
+         audioPlayer.play();
        } else {
-         productAudioPlayer.pause();
+         audioPlayer.pause();
        }
      });
 {% endjavascript %}
