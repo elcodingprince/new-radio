@@ -12,11 +12,11 @@
   </div>
 
   <div class="container">
-      <div class="product-img">
+      <div class="product-img" id="productImg" style="display: none;">
           <img src="{{ product.featured_image.src | img_url: 'medium' }}" class="active" id="cover" alt="{{ product.title }}" />
       </div>
 
-      <h2 id="product-title">{{ product.title }}</h2>
+      <h2 id="productTitle" style="display: none;">{{ product.title }}</h2>
 
       <div class="player-progress" id="player-progress">
                 <div class="progress" id="progress"></div>
