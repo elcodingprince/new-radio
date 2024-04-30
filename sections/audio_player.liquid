@@ -17,17 +17,14 @@
 }
 {% endschema %}
 
-{% if product.tags contains 'audio' %}
-    <div class= "hiddenAudioPlayer">
-     <audio id="audioPlayer" contains>
-      <source src="{{ product.metafields.custom.audio.value.url }}" type="audio/mpeg">
-      Your browswer does not support this audio element.
-
-    </audio>
-
-
-
-
+ {% if product.tags contains 'audio' %}
+   <div class="product-audio-player">
+     <audio controls>
+       <source src={{ product.metafields.custom.audio.url }} type="audio/mpeg">
+       Your browser does not support the audio element.
+     </audio>
+   </div>
+   {% endif %}
 
 
 {% javascript %}
