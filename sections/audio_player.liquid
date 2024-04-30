@@ -19,8 +19,7 @@
 
 {% if section.settings.selected_product and section.settings.selected_product.metafields.custom.audio %}
 <div class="play-button">
-    <audio id="audioPlayer" controls style="display: none;"></audio> <!-- Moved the audio element outside the button -->
-    <button class="playPauseButton" id="play"> 
+    <button class="playPauseButton" id="productPlayBtn"> 
         <i class="fa-solid fa-play"></i>
     </button>
 </div>
@@ -28,21 +27,6 @@
 
 
 {% javascript %}
-// Add an event listener to all play buttons on products
-document.querySelectorAll('.play-button').forEach(button => {
-  button.addEventListener('click', function() {
-    // Extract the audio URL from the data-audio attribute
-    const audioUrl = this.getAttribute('data-audio');
-    // Load the audio into the sticky audio player
-    loadMusic({
-      path: audioUrl,
-      displayName: 'Custom Title', // You can set this dynamically if needed
-      cover: 'Custom Cover URL',   // You can set this dynamically if needed
-      artist: 'Custom Artist'      // You can set this dynamically if needed
-    });
-  });
-});
-{{ 'omni-audio-player.css' | asset_url | stylesheet_tag }}
 
 {% endjavascript %}
 
