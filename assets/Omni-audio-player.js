@@ -28,4 +28,3 @@ productPlayBtn.addEventListener('click', function() {
 stickyPlayBtn.addEventListener('click', function() {
     togglePlay();
 });
-});
