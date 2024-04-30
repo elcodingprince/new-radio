@@ -26,7 +26,7 @@
 <audio id="audioPlayer" controls>
     {% for product in section.settings.selected_product %}
         {% if product.metafields.custom.audio %}
-            <source src="{{ card_product.metafields.product.audio.value.url }}" type="audio/mpeg"> type="audio/mpeg">
+            <source src="{{ product.metafields.product.audio.value.url }}" type="audio/mpeg"> type="audio/mpeg">
         {% endif %}
     {% endfor %}
     Your browser does not support the audio element.
