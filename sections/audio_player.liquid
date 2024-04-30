@@ -51,22 +51,7 @@ document.getElementById('productPlayBtn').addEventListener('click', function() {
   }
 });
 
-// Update play button icon when audio playback state changes
-audioPlayer.addEventListener('play', function() {
-  const playIcon = document.getElementById('playIcon'); // Get reference to the play icon
-  if (playIcon) {
-    playIcon.classList.remove('fa-play');
-    playIcon.classList.add('fa-pause');
-  }
-});
 
-audioPlayer.addEventListener('pause', function() {
-  const playIcon = document.getElementById('playIcon'); // Get reference to the play icon
-  if (playIcon) {
-    playIcon.classList.remove('fa-pause');
-    playIcon.classList.add('fa-play');
-  }
-});
 {% endjavascript %}
 
 {% style %}
