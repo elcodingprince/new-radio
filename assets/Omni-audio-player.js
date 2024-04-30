@@ -21,7 +21,7 @@ function togglePlay() {
 // Add click event listeners to both buttons
 productPlayBtn.addEventListener('click', function() {
     // Set audio source for sticky audio player
-    audio.src = 'URL_TO_SELECTED_SONG';
+    audio.src = "{{ product.metafields.custom.audio.value }}";
     togglePlay();
 });
 
