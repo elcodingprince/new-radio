@@ -3,7 +3,7 @@ const productPlayBtn = document.getElementById('productPlayBtn');
 const stickyPlayBtn = document.getElementById('omniPlayBtn');
 
 // Get the audio element
-const audio = document.getElementById('audioPlayer');
+const audio = new Audio();
 
 // Function to handle play/pause toggle
 function togglePlay() {
@@ -21,7 +21,7 @@ function togglePlay() {
 // Add click event listeners to both buttons
 productPlayBtn.addEventListener('click', function() {
     // Set audio source for sticky audio player
-    audio.src = audioUrl;
+    audio.src = "{{ product.metafields.custom.audio.value }}";
     togglePlay();
 });
 
