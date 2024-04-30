@@ -34,41 +34,39 @@
 {% endif %}
 
 {% javascript %}
-     // Get reference to the audio player
-     var audioPlayer = document.getElementById('productAudioPlayer');
-     const playIcon = document.getElementById('play');
+// Get reference to the audio player
+const audioPlayer = document.getElementById('productAudioPlayer');
 
-     // Add click event listener to the play button
-     document.getElementById('productPlayBtn').addEventListener('click', function() {
-       // Check if audio is paused, then play or pause accordingly
-       if (audioPlayer.paused) {
-         audioPlayer.play();
-         playIcon. playBtn.classList.replace('fa-play', 'fa-pause');;
-         playIcon.classList.add('fa-pause');
-       } else {
-         audioPlayer.pause();
-         playIcon.classList.replace('fa-pause', 'fa-play');
-         playIcon.classList.add('fa-play');
-       }
-     });
+// Add click event listener to the play button
+document.getElementById('productPlayBtn').addEventListener('click', function() {
+  const playIcon = document.getElementById('play'); // Get reference to the play icon
+  
+  // Check if audio is paused, then play or pause accordingly
+  if (audioPlayer.paused) {
+    audioPlayer.play();
+    playIcon.classList.replace('fa-play', 'fa-pause');
+  } else {
+    audioPlayer.pause();
+    playIcon.classList.replace('fa-pause', 'fa-play');
+  }
+});
 
-      // Update play button icon when audio playback state changes
-       
-       audioPlayer.addEventListener('play', function() {
-       var playIcon = document.getElementById('playIcon');
-       if (playIcon) {
-         playIcon.classList.remove('fa-play');
-         playIcon.classList.add('fa-pause');
-       }
-     });
+// Update play button icon when audio playback state changes
+audioPlayer.addEventListener('play', function() {
+  const playIcon = document.getElementById('play'); // Get reference to the play icon
+  if (playIcon) {
+    playIcon.classList.remove('fa-play');
+    playIcon.classList.add('fa-pause');
+  }
+});
 
-     audioPlayer.addEventListener('pause', function() {
-       var playIcon = document.getElementById('playIcon');
-       if (playIcon) {
-         playIcon.classList.remove('fa-pause');
-         playIcon.classList.add('fa-play');
-       }
-     });
+audioPlayer.addEventListener('pause', function() {
+  const playIcon = document.getElementById('play'); // Get reference to the play icon
+  if (playIcon) {
+    playIcon.classList.remove('fa-pause');
+    playIcon.classList.add('fa-play');
+  }
+});
 {% endjavascript %}
 
 {% style %}
