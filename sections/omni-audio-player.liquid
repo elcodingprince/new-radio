@@ -56,20 +56,20 @@
 {% endschema %}
 
 {% javascript %}
-        const audioPlayer = document.getElementById('productAudioPlayer');
+         const playButton = document.getElementById('omniPlayBtn');
 
         // Get reference to the product info elements
         const productImg = document.getElementById('productImg');
         const productTitle = document.getElementById('product-title');
 
-        // Add event listener to update product info visibility when play button is clicked
-        document.getElementById('omniPlayBtn').addEventListener('click', function() {
-          if (audioPlayer.paused) {
-            audioPlayer.play();
+        // Add event listener to play button to toggle product info visibility
+        playButton.addEventListener('click', function() {
+          if (productImg.style.display === 'none') {
             productImg.style.display = 'block';
             productTitle.style.display = 'block';
           } else {
-            audioPlayer.pause();
+            productImg.style.display = 'none';
+            productTitle.style.display = 'none';
           }
         });
 {% endjavascript %}
