@@ -23,9 +23,8 @@
         <i class="fa-solid fa-play"></i>
     </button>
 </div>
-<script> const productAudioUrl = "{{ product.metafields.custom.audio.value }}"; </script>
-    <script src="Omni-audio-player.js" defer></script>
-</body>
+<audio id="hiddenAudioPlayer" src="{{ product.metafields.custom.audio.value }}"></audio>
+<script src="Omni-audio-player.js" defer></script>
 {% endif %}
 
 
