@@ -125,12 +125,6 @@
         "padding_bottom": 12
       }
     },
-    "audio_player_KAiN3r": {
-      "type": "audio_player",
-      "settings": {
-        "selected_product": "{{ product }}"
-      }
-    },
     "image-with-text": {
       "type": "image-with-text",
       "blocks": {
@@ -232,7 +226,6 @@
   },
   "order": [
     "main",
-    "audio_player_KAiN3r",
     "image-with-text",
     "multicolumn",
     "related-products"
