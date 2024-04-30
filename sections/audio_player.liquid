@@ -20,7 +20,7 @@
 {% if product.tags contains 'audio' %}
 
    <div class="product-audio-player">
-     <audio controls>
+     <audio controls id="productAudioPlayer">
        <source src="{{ product.metafields.custom.audio.value.url }}" type="audio/mpeg">
        Your browser does not support the audio element.
      </audio>
@@ -34,7 +34,20 @@
 {% endif %}
 
 {% javascript %}
+   <script>
+     // Get reference to the audio player
+     var audioPlayer = document.getElementById('audioPlayer');
 
+     // Add click event listener to the play button
+     document.getElementById('productPlayBtn').addEventListener('click', function() {
+       // Check if audio is paused, then play or pause accordingly
+       if (audioPlayer.paused) {
+         audioPlayer.play();
+       } else {
+         audioPlayer.pause();
+       }
+     });
+   </script>
 {% endjavascript %}
 
 {% style %}
