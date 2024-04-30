@@ -41,8 +41,12 @@
        // Check if audio is paused, then play or pause accordingly
        if (audioPlayer.paused) {
          audioPlayer.play();
+         playIcon.classList.remove('fa-play');
+         playIcon.classList.add('fa-pause');
        } else {
          audioPlayer.pause();
+         playIcon.classList.remove('fa-pause');
+         playIcon.classList.add('fa-play');
        }
      });
 {% endjavascript %}
