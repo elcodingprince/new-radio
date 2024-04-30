@@ -20,7 +20,7 @@
 {% if product.tags contains 'audio' %}
     <div class= "hiddenAudioPlayer">
      <audio id="audioPlayer" contains>
-      <sourceC type="audio/mpeg">
+      <source src="{{ product.metafields.custom.audio.value.url }}" type="audio/mpeg">
       Your browswer does not support this audio element.
 
     </audio>
