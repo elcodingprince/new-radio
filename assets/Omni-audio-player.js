@@ -1,5 +1,5 @@
 const playBtn = document.getElementById('play');
-const audioUrl = "{{ card_product.metafields.product.audio.value.url }}";
+const audioUrl = "product.metafields.product.audio.value.url }}";
 
 let audio = new Audio(audioUrl);
 
