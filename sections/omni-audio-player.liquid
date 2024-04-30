@@ -13,10 +13,10 @@
 
   <div class="container">
       <div class="product-img">
-          <img src="" class="active" id="cover"/>
+          <img src="{{ product.featured_image.src | img_url: 'medium' }}" class="active" id="cover" alt="{{ product.title }}" />
       </div>
 
-      <h2 id="product-title"></h2>
+      <h2 id="product-title">{{ product.title }}</h2>
 
       <div class="player-progress" id="player-progress">
                 <div class="progress" id="progress"></div>
