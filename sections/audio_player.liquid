@@ -35,21 +35,53 @@
 
 
 {% javascript %}
-     // Get reference to the audio player
-     var audioPlayer = document.getElementById('productAudioPlayer');
+ // Get reference to the audio player and play button icon
+const audioPlayer = document.getElementById('productAudioPlayer');
+const playIcon = document.getElementById('play');
+let isPlaying = false;
 
-     // Add click event listener to the play button
-     document.getElementById('productPlayBtn').addEventListener('click', function() {
-       // Check if audio is paused, then play or pause accordingly
-       if (audioPlayer.paused) {
-         audioPlayer.play();
-       } else {
-         audioPlayer.pause();
-       }
-     });
-{% endjavascript %}
+// Add click event listener to the play button
+document.getElementById('productPlayBtn').addEventListener('click', togglePlay);
 
+// Toggle play/pause functionality
+function togglePlay() {
+  if (isPlaying) {
+    pauseMusic();
+  } else {
+    playMusic();
+  }
+}
 
+// Function to play music
+function playMusic() {
+  isPlaying = true;
+  // Change play button icon
+  playIcon.classList.replace('fa-play', 'fa-pause');
+  // set button hover title
+  playIcon.setAttribute('title', 'Pause');
+  audioPlayer.play();
+}
+
+// Function to pause music
+function pauseMusic() {
+  isPlaying = false;
+  // Change pause button icon
+  playIcon.classList.replace('fa-pause', 'fa-play');
+  // Set button hover title 
+  playIcon.setAttribute('title', 'Play');
+  audioPlayer.pause();
+}
+
+// Update play button icon when audio playback state changes
+audioPlayer.addEventListener('play', function() {
+  playIcon.classList.remove('fa-play');
+  playIcon.classList.add('fa-pause');
+});
+
+audioPlayer.addEventListener('pause', function() {
+  playIcon.classList.remove('fa-pause');
+  playIcon.classList.add('fa-play');
+});
 {% endjavascript %}
 
 {% style %}
