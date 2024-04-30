@@ -18,6 +18,7 @@
 {% endschema %}
 
 {% if product.tags contains 'audio' %}
+
    <div class="product-audio-player">
      <audio controls>
        <source src="{{ product.metafields.custom.audio.value.url }}" type="audio/mpeg">
