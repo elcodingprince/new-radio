@@ -142,6 +142,14 @@
           </div>
         </div>
       </div>
+     <div class="custom-audio-player">
+       {% if product.tags contains 'audio' %}
+        <audio id="audioPlayer" controls>
+          <source src="{{ card_product.metafields.product.audio.value.url }}" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+        <button id="playPauseButton" class="play">Play</button>
+      </div>
       <div class="card__content">
         <div class="card__information">
           <h3
