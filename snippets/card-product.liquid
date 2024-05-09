@@ -107,7 +107,7 @@
              {%- if card_product.metafields.custom.audio != blank -%}
               <div class="play-button-overlay">
                   <img src="{{ 'black-vector-play-button.png' | asset_url }}" alt=" " class="play-button-image">
-               <a>href="{{ card_product.url }}"</a>
+               <a href="{{ card_product.url }}" class="product-link"></a>
               </div>
               {%- endif -%}
 
