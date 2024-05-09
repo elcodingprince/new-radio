@@ -102,6 +102,19 @@
                   height="{{ card_product.media[1].height }}"
                 >
               {%- endif -%}
+
+              {%- if card_product.tags contains 'audio' -%}
+              <div class="play-button-overlay">
+                <a href="#" class="play-button-link">
+                  <img src="{{ 'black-vector-play-button.png' | asset_url }}" alt=" " class="play-button-image">
+                </a>
+              </div>
+              {%- endif -%}
+
+              <audio id="audio-player-{{ card_product.id }}" controls style="display: none;">
+                <source src="{{ card_product.metafields.product.audio.value.url }}" type="audio/mpeg">
+                Your browser does not support the audio element.
+              </audio>
             </div>
           </div>
         {%- endif -%}
@@ -141,14 +154,6 @@
             {%- endif -%}
           </div>
         </div>
-      </div>
-     <div class="custom-audio-player">
-       {% if product.tags contains 'custom.audio' %}
-        <audio id="audioPlayer" controls>
-          <source src="{{ card_product.metafields.product.audio.value.url }}" type="audio/mpeg">
-          Your browser does not support the audio element.
-        </audio>
-        <button id="playPauseButton" class="play">Play</button>
       </div>
       <div class="card__content">
         <div class="card__information">
