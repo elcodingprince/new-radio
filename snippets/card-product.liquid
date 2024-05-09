@@ -107,6 +107,7 @@
              {%- if card_product.metafields.custom.audio != blank -%}
               <div class="play-button-overlay">
                   <img src="{{ 'black-vector-play-button.png' | asset_url }}" alt=" " class="play-button-image">
+               <a>href="{{ card_product.url }}"</a>
               </div>
               {%- endif -%}
 
@@ -163,7 +164,6 @@
             {% endif %}
           >
             <a
-              href="{{ card_product.url }}"
               id="CardLink-{{ section_id }}-{{ card_product.id }}"
               class="full-unstyled-link"
               aria-labelledby="CardLink-{{ section_id }}-{{ card_product.id }} Badge-{{ section_id }}-{{ card_product.id }}"
