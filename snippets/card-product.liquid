@@ -104,8 +104,7 @@
               {%- endif -%}
 
 
-              {% if card_product.tags contains 'audio' %}
-
+             {%- if card_product.metafields.custom.audio != blank -%}
               <div class="play-button-overlay">
                 <a href="#" class="play-button-link">
                   <img src="{{ 'black-vector-play-button.png' | asset_url }}" alt=" " class="play-button-image">
