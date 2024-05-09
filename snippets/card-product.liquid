@@ -112,7 +112,7 @@
               </div>
               {%- endif -%}
 
-              <audio id="audio-player-{{ card_product.id }}" controls style="display: none;">
+              <audio id="audio-player-{{ card_product.id }}" controls>
                 <source src="{{ card_product.metafields.product.audio.value.url }}" type="audio/mpeg">
                 Your browser does not support the audio element.
               </audio>
