@@ -106,7 +106,8 @@
 
 
              {%- if card_product.metafields.custom.audio != blank -%}
-              <div class="product-cardPlayBtnOverlay">
+              <div class="product-cardPlayBtnOverlay"
+               onclick="document.getElementById('product-card-audio-player-{{ card_product.id }}').play()" >
                   <img src="{{ 'black-vector-play-button.png' | asset_url }}" alt=" " class="play-button-image">
               </div>
 
