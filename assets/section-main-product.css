@@ -86,7 +86,7 @@
   }
 }
 
-.product__media-wrapper img {
+.product__media-wrapper {
   border: 2px solid red;
   position: relative;
   z-index: 998;
