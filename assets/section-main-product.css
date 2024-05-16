@@ -57,8 +57,8 @@
 }
 
 .product--large:not(.product--no-media) .product__media-wrapper img {
-  max-width: 10px;
-  width: 10px;
+  max-width: 100%;
+  width: auto;
 }
 @media screen and (min-width: 990px) {
   .product--large:not(.product--no-media) .product__media-wrapper {
