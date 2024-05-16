@@ -62,7 +62,7 @@
 
 #productPlayBtn .fa-play {
   /* Your CSS styles for the play button icon */
-  font-size: 70px; /* Example size */
+  font-size: 100px; /* Example size */
 }
 
 @media screen and (min-width: 990px) {
