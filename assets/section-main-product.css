@@ -88,7 +88,6 @@
 
 .product__media-wrapper img {
   border: 2px solid red;
-  position: relative;
   z-index: 998;
 }
 #MainContent {
