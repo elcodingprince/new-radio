@@ -88,6 +88,7 @@
 
 .product__media-wrapper {
   border: 2px solid red;
+  position: relative;
 }
 
 #productAudioPlayer{
@@ -98,6 +99,7 @@
   /* Your CSS styles for the play button icon */
   font-size: 100px; /* Example size */
 }
+
 /* Dynamic checkout */
 
 .shopify-payment-button__button {
