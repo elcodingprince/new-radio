@@ -58,8 +58,8 @@
 
 @media screen and (min-width: 990px) {
   .product--large:not(.product--no-media) .product__media-wrapper {
-    max-width: 14%;
-    width: calc(14% - var(--grid-desktop-horizontal-spacing) / 2);
+    max-width: 18%;
+    width: calc(18% - var(--grid-desktop-horizontal-spacing) / 2);
   }
 
   .product--large:not(.product--no-media) .product__info-wrapper {
