@@ -91,6 +91,9 @@
   position: relative;
   z-index: 998;
 }
+#MainContent {
+  position: relative;
+}
 
 #productAudioPlayer{
   display: none;
