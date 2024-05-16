@@ -89,9 +89,6 @@
 .product__media-wrapper {
   border: 2px solid red;
   z-index: 998;
-  position:%20relative;
-}
-.shopify-section {
   position: relative;
 }
 
