@@ -56,6 +56,15 @@
   }
 }
 
+#productAudioPlayer{
+  display: none;
+}
+
+#productPlayBtn .fa-play {
+  /* Your CSS styles for the play button icon */
+  font-size: 50px; /* Example size */
+}
+
 @media screen and (min-width: 990px) {
   .product--large:not(.product--no-media) .product__media-wrapper {
     max-width: 20%;
