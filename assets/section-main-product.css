@@ -96,8 +96,11 @@
 }
 
 #productPlayBtn .fa-play {
-  /* Your CSS styles for the play button icon */
-  font-size: 100px; /* Example size */
+  position: absolute;
+  top: 50%; /* Adjust the top position as needed */
+  left: 50%; /* Adjust the left position as needed */
+  transform: translate(-50%, -50%); /* Center the play button */
+  z-index: 1; /* Ensure the play button is above the image */
 }
 
 /* Dynamic checkout */
