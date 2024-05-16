@@ -58,6 +58,7 @@
 
 .product--large:not(.product--no-media) .product__media-wrapper img {
   max-width: 24%;
+  width: 24%;
 }
 @media screen and (min-width: 990px) {
   .product--large:not(.product--no-media) .product__media-wrapper {
