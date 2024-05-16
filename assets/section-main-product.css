@@ -58,22 +58,11 @@
 
 
 
-@media screen and (min-width: 990px) { 
-  .product--large:not(.product--no-media) .product__media-wrapper {
-    max-width: 100%;
-    width: auto;
-}
-}
-.product--large:not(.product--no-media) .product__media-wrapper img {
-    max-width: 33%;
-    width: auto;
-    
-}
-/* @media screen and (min-width: 990px) {
+@media screen and (min-width: 990px) {
   .product--large:not(.product--no-media) .product__media-wrapper img {
-    max-width: 100%;
-    width: calc(auto - var(--grid-desktop-horizontal-spacing) / 2);
-  } ORIGINAL ^^ */
+    max-width: 33%%;
+    width: calc(33% - var(--grid-desktop-horizontal-spacing) / 2);
+  } 
 
   .product--large:not(.product--no-media) .product__info-wrapper {
     padding: 0 0 0 4rem;
