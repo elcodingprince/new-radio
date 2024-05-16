@@ -61,9 +61,9 @@
   width: auto;
 }
 @media screen and (min-width: 990px) {
-  .product--large:not(.product--no-media) .product__media-wrapper {
-    max-width: 34%;
-    width: calc(34% - var(--grid-desktop-horizontal-spacing) / 2);
+  .product--large:not(.product--no-media) .product__media-wrapper img {
+    max-width: 100%;
+    width: calc(auto - var(--grid-desktop-horizontal-spacing) / 2);
   }
 
   .product--large:not(.product--no-media) .product__info-wrapper {
