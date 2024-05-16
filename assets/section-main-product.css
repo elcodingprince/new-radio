@@ -97,8 +97,8 @@
 
 #productPlayBtn .fa-play {
   position: absolute;
-  top: 50%; /* Adjust the top position as needed */
-  left: 50%; /* Adjust the left position as needed */
+  top: 10px; /* Adjust the top position as needed */
+  left: 10px; /* Adjust the left position as needed */
   transform: translate(-50%, -50%); /* Center the play button */
   z-index: 1; /* Ensure the play button is above the image */
 }
