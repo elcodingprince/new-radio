@@ -85,7 +85,7 @@
   }
 }
 
-.grid__item {
+.product__media-wrapper  {
   position: relative;
   border: 2px solid red;
   
