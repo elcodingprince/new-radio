@@ -56,11 +56,6 @@
   }
 }
 
-.grid__item product__media-wrapper {
-  position: relative;
-  
-}
-
 @media screen and (min-width: 990px) {
   .product--large:not(.product--no-media) .product__media-wrapper {
     max-width: 20%;
@@ -90,6 +85,11 @@
   }
 }
 
+.grid__item product__media-wrapper {
+  position: relative;
+  border-radius: 10px red;
+  
+}
 
 #productAudioPlayer{
   display: none;
