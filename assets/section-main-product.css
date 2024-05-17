@@ -58,6 +58,7 @@
 
 .grid__item product__media-wrapper {
   position: relative;
+  
 }
 
 @media screen and (min-width: 990px) {
@@ -89,10 +90,6 @@
   }
 }
 
-.product__media-wrapper img {
-  border: 2px solid red;
-  position: relative;
-}
 
 #productAudioPlayer{
   display: none;
